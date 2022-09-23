@@ -179,11 +179,24 @@ function findEvenServingCounts(){
   })
   return results;
 }
-
 let evenServingCounts = findEvenServingCounts();
 console.log("Dish(es) with Even Serving Counts: ", evenServingCounts);
+
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
+function tomatoAndCheeseFinder() {
+  let results;
+  results = dishes.filter(function(food){
+    if ((food.ingredients === "tomato") && (food.ingredients === "cheese")){
+      return true;
+    }
+    return false;
+  })
+  return results;
+}
+
+let tomatoAndCheeseFood = tomatoAndCheeseFinder();
+console.log("Dish(es) Whose Ingredients Include Tomato & Cheese: ", tomatoAndCheeseFood);
 
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
