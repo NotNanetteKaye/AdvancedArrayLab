@@ -194,18 +194,33 @@ function tomatoAndCheeseFinder() {
   })
   return results;
 }
-
 let tomatoAndCheeseFood = tomatoAndCheeseFinder();
 console.log("Dish(es) Whose Ingredients Include Tomato & Cheese: ", tomatoAndCheeseFood);
 
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
-
-// BONUS: (come back to this after finishing all)
-//6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
+function cuisineTypeFinder() {
+  let results;
+  results = dishes.map(function(foodie){
+    return `${foodie.cuisine}`;
+  })
+  return results;
+}
+let cuisineTypes = cuisineTypeFinder();
+console.log("Cuisine Types: ", cuisineTypes);
 
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map
+function cuisineDishFinder() {
+  let results;
+  results = dishes.map(function(cuisinedish){
+    return `${cuisinedish.cuisine} ${cuisinedish.name}`
+  })
+  return results;
+}
+
+let cuisineDish = cuisineDishFinder();
+console.log("Cuisine Dishes: ", cuisineDish);
 
 //8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
@@ -219,3 +234,6 @@ console.log("Dish(es) Whose Ingredients Include Tomato & Cheese: ", tomatoAndChe
 //Must use Reduce, not a loop.
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
+
+// BONUS: (come back to this after finishing all)
+//6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
