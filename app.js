@@ -139,9 +139,33 @@ console.log("Vegetarian Foods: ", vegetarianFood)
 
 //2. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
 //Filter
+function problemTwoSolver(){
+  let results;
+  results =dishes.filter(function(italianFood){
+    if ((italianFood.cuisine === "italian") && (italianFood.servings > 5)){
+      return true;
+    }
+    return false
+  })
+  return results;
+  }
+let problemTwoAnswer = problemTwoSolver();
+console.log("Italian Food(s) with a Serving Size of 5:", problemTwoAnswer)
 
 //3. Create a function that will return only dishes whose serving id number matches their serving count.
 //Filter
+function problemThreeSolver(){
+  let results;
+  results=dishes.filter(function(el){
+    if (el.id === el.servings){
+      return true;
+    }
+    return false
+  })
+  return results;
+}
+let problemThreeAnswer = problemThreeSolver();
+console.log("Dish(es) Whose Serving ID Number Matches Their Serving Count: ", problemThreeAnswer)
 
 //4. Create a function that will return only dishes whose serving count is even.
 //Filter
